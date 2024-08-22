@@ -1,0 +1,5 @@
+title: Moja Strona na GitHub Pages
+description: To jest moja pierwsza strona używająca Jekyll na GitHub Pages.
+baseurl: "" # pozostaw puste, jeśli strona jest na głównej ścieżce repozytorium
+url: "https://twoja_nazwa_uzytkownika.github.io" # URL Twojej strony
+theme: minima # prosty, domyślny motyw Jekyll
