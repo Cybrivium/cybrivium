@@ -1,12 +1,21 @@
 title: Moja Strona o Cyberbezpieczeństwie
 description: Strona poświęcona tematyce cyberbezpieczeństwa.
-baseurl: "" # pozostań pusty
+baseurl: "" # Pozostań pusty
 url: "https://cybrivium.github.io"
 theme: minimal-mistakes-jekyll
 
-# dodatkowe opcje motywu
-# logo: /assets/images/logo.png # dodaj swoje logo
+# Dodatkowe opcje motywu
+logo: /assets/images/logo.png # Usuń, jeśli nie masz logo
 social_links:
   - name: GitHub
     url: https://github.com/cybrivium
     icon: fab fa-github
+
+# Opcjonalne: Strona główna
+home:
+  layout: splash
+  title: "Witaj na Cybrivium"
+  overlay_color: "#000" # Kolor overlay na tle
+  overlay_image: /assets/images/background.jpg # Tło dla sekcji nagłówka
+  cta_label: "Zobacz nasz blog"
+  cta_url: "/blog/"
