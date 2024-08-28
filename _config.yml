@@ -1,5 +1,12 @@
-title: Moja Strona na GitHub Pages
-description: To jest moja pierwsza strona używająca Jekyll na GitHub Pages.
-baseurl: "" # pozostaw puste, jeśli strona jest na głównej ścieżce repozytorium
-url: "https://twoja_nazwa_uzytkownika.github.io" # URL Twojej strony
-theme: minima # prosty, domyślny motyw Jekyll
+title: Moja Strona o Cyberbezpieczeństwie
+description: Strona poświęcona tematyce cyberbezpieczeństwa.
+baseurl: "" # pozostań pusty
+url: "https://cybrivium.github.io"
+theme: minimal-mistakes-jekyll
+
+# dodatkowe opcje motywu
+logo: /assets/images/logo.png # dodaj swoje logo
+social_links:
+  - name: GitHub
+    url: https://github.com/cybrivium
+    icon: fab fa-github
