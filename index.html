@@ -6,8 +6,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 image2: /images/home05.png
 ---
 
-
-<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
+<section class="hero" style="background-image: url({% include relative-src.html src=page.image %}); padding: 20px;">
     <div class="inner-hero text-container">
         <div class="hero-text-container">
             <h1 class="editable">Droga do bezpiecznej przyszłości</h1>
@@ -55,7 +54,7 @@ image2: /images/home05.png
         </div>
     </section>
 
-<section class="hero" style="background-image: url({% include relative-src.html src=page.image2 %})">
+    <section class="hero" style="background-image: url({% include relative-src.html src=page.image2 %}); padding: 20px;">
         <div class="inner-hero text-container">
             <div class="hero-text-container">
                 <h2 class="editable">Dołącz do społeczności</h2>
@@ -65,3 +64,44 @@ image2: /images/home05.png
         </div>
     </section>
 </div>
+
+<style>
+    /* Dodaj style dla urządzeń mobilnych */
+    @media only screen and (max-width: 600px) {
+        .hero-text-container {
+            padding: 10px;
+            text-align: center;
+        }
+        .hero h1, .hero p {
+            font-size: 1.5rem; /* Zmniejsz rozmiar tekstu */
+            margin: 0 10px; /* Dodaj margines wewnętrzny */
+        }
+        .subtext {
+            font-size: 1rem; /* Mniejszy rozmiar dla podtytułu */
+        }
+        .content .text {
+            padding: 10px; /* Dodaj padding do kontenera z tekstem */
+        }
+        .content .image img {
+            max-width: 100%; /* Obrazki powinny zajmować maksymalnie szerokość ekranu */
+            height: auto;
+        }
+    }
+
+    /* Ogólne style dla większych ekranów */
+    .container.flex {
+        display: flex;
+        flex-wrap: wrap; /* Umożliwia zawijanie elementów w wierszu */
+        gap: 20px; /* Odstępy między sekcjami */
+    }
+
+    .container .text, .container .image {
+        flex: 1 1 45%; /* Umożliwia elastyczne dostosowanie szerokości */
+    }
+
+    /* Stylizacja dla hero-sekcji */
+    .hero-text-container {
+        max-width: 90%; /* Zapewnij, że tekst nie będzie wychodził poza ekran */
+        margin: 0 auto; /* Wyśrodkuj zawartość */
+    }
+</style>
