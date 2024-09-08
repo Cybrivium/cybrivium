@@ -6,7 +6,7 @@ bottom_image: https://unsplash.it/2000/1322?a=.png
 image2: /images/home05.png
 ---
 
-<section class="hero" style="background-image: url({% include relative-src.html src=page.image %}); padding: 20px;">
+<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
     <div class="inner-hero text-container">
         <div class="hero-text-container">
             <h1 class="editable">Droga do bezpiecznej przyszłości</h1>
@@ -54,7 +54,7 @@ image2: /images/home05.png
         </div>
     </section>
 
-<section class="hero" style="background-image: url({% include relative-src.html src=page.image2 %}); padding: 20px;">
+    <section class="hero" style="background-image: url({% include relative-src.html src=page.image2 %})">
         <div class="inner-hero text-container">
             <div class="hero-text-container">
                 <h2 class="editable">Dołącz do społeczności</h2>
@@ -64,91 +64,3 @@ image2: /images/home05.png
         </div>
     </section>
 </div>
-
-<style>
-    /* Global styles */
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        box-sizing: border-box;
-    }
-
-    .hero-text-container, .text, .cta {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    /* Ensure content adapts to mobile screens */
-    .content .text {
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .container.flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .container .text, .container .image {
-        flex: 1 1 45%;
-    }
-
-    /* Responsive styling for mobile devices */
-    @media (max-width: 768px) {
-        .hero-text-container {
-            text-align: center;
-            padding: 10px;
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        .subtext {
-            font-size: 1rem;
-        }
-
-        .cta {
-            padding: 10px;
-        }
-
-        .content .text, .content .image {
-            flex: 1 1 100%;
-        }
-
-        .container.flex {
-            display: block;
-        }
-
-        .image img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-    }
-
-    /* Additional styles for smaller screens (mobile phones) */
-    @media (max-width: 480px) {
-        .hero h1 {
-            font-size: 1.8rem;
-        }
-
-        .hero p {
-            font-size: 1rem;
-        }
-
-        .subtext {
-            font-size: 0.9rem;
-        }
-    }
-</style>
