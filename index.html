@@ -54,7 +54,7 @@ image2: /images/home05.png
         </div>
     </section>
 
-    <section class="hero" style="background-image: url({% include relative-src.html src=page.image2 %}); padding: 20px;">
+<section class="hero" style="background-image: url({% include relative-src.html src=page.image2 %}); padding: 20px;">
         <div class="inner-hero text-container">
             <div class="hero-text-container">
                 <h2 class="editable">Dołącz do społeczności</h2>
@@ -66,42 +66,89 @@ image2: /images/home05.png
 </div>
 
 <style>
-    /* Dodaj style dla urządzeń mobilnych */
-    @media only screen and (max-width: 600px) {
-        .hero-text-container {
-            padding: 10px;
-            text-align: center;
-        }
-        .hero h1, .hero p {
-            font-size: 1.5rem; /* Zmniejsz rozmiar tekstu */
-            margin: 0 10px; /* Dodaj margines wewnętrzny */
-        }
-        .subtext {
-            font-size: 1rem; /* Mniejszy rozmiar dla podtytułu */
-        }
-        .content .text {
-            padding: 10px; /* Dodaj padding do kontenera z tekstem */
-        }
-        .content .image img {
-            max-width: 100%; /* Obrazki powinny zajmować maksymalnie szerokość ekranu */
-            height: auto;
-        }
+    /* Global styles */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
     }
 
-    /* Ogólne style dla większych ekranów */
+    .hero-text-container, .text, .cta {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Ensure content adapts to mobile screens */
+    .content .text {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
     .container.flex {
         display: flex;
-        flex-wrap: wrap; /* Umożliwia zawijanie elementów w wierszu */
-        gap: 20px; /* Odstępy między sekcjami */
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
     }
 
     .container .text, .container .image {
-        flex: 1 1 45%; /* Umożliwia elastyczne dostosowanie szerokości */
+        flex: 1 1 45%;
     }
 
-    /* Stylizacja dla hero-sekcji */
-    .hero-text-container {
-        max-width: 90%; /* Zapewnij, że tekst nie będzie wychodził poza ekran */
-        margin: 0 auto; /* Wyśrodkuj zawartość */
+    /* Responsive styling for mobile devices */
+    @media (max-width: 768px) {
+        .hero-text-container {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .subtext {
+            font-size: 1rem;
+        }
+
+        .cta {
+            padding: 10px;
+        }
+
+        .content .text, .content .image {
+            flex: 1 1 100%;
+        }
+
+        .container.flex {
+            display: block;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    /* Additional styles for smaller screens (mobile phones) */
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+
+        .subtext {
+            font-size: 0.9rem;
+        }
     }
 </style>
