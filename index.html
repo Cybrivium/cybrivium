@@ -1,128 +1,12 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
-    <style>
-        /* Globalne style */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+---
+title: Home
+description: The latest app to help you find new friends with common interests.
+image: /images/home01.png
+bottom_image: https://unsplash.it/2000/1322?a=.png
+image2: /images/home05.png
+---
 
-        h1, h2 {
-            margin: 0 0 10px;
-            font-weight: bold;
-        }
-
-        p {
-            margin: 0 0 20px;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-
-        .button a {
-            padding: 10px 20px;
-            background-color: #007bff;
-            border-radius: 5px;
-        }
-
-        /* Kontener tekstu */
-        .text-container, .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .inner-hero {
-            text-align: center;
-            padding: 80px 20px;
-            color: white;
-        }
-
-        .hero-text-container {
-            margin: 0 auto;
-            padding: 15px;
-            max-width: 800px;
-        }
-
-        .subtext {
-            font-size: 1.2rem;
-        }
-
-        /* Układ z flexboxem */
-        .info {
-            padding: 40px 20px;
-        }
-
-        .flex {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .text, .image {
-            flex: 1 1 45%;
-            margin-bottom: 20px;
-        }
-
-        .image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Responsywność */
-        @media (max-width: 768px) {
-            .flex {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .text, .image {
-                flex: 1 1 100%;
-            }
-
-            .inner-hero {
-                padding: 60px 15px;
-            }
-
-            h1, h2 {
-                font-size: 1.8rem;
-            }
-
-            .subtext {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1, h2 {
-                font-size: 1.5rem;
-            }
-
-            .subtext {
-                font-size: 0.9rem;
-            }
-
-            .button a {
-                padding: 8px 16px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<section class="hero" style="background-image: url('/images/home01.png'); background-size: cover;">
+<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
     <div class="inner-hero text-container">
         <div class="hero-text-container">
             <h1 class="editable">Droga do bezpiecznej przyszłości</h1>
@@ -141,7 +25,7 @@
                 <p class="editable">Zadbaj o swoje bezpieczeństwo online. Sprawdź nasze proste przewodniki i dowiedz się, jak chronić dane i unikać zagrożeń w sieci.</p>
             </div>
             <div class="image">
-                <img class="editable" src="/images/home02.png" alt="Cybersecurity Basics">
+                <img class="editable" src="{{ site.baseurl }}/images/home02.png" alt="Cybersecurity Basics">
             </div>
         </div>
     </section>
@@ -153,7 +37,7 @@
                 <p class="editable">Świat cyberbezpieczeństwa zmienia się szybko. Śledź nasze aktualizacje, aby być zawsze na bieżąco i o krok przed cyberatakami.</p>
             </div>
             <div class="image">
-                <img class="editable" src="/images/home03.png" alt="Stay Updated on Cyber Threats" />
+                <img class="editable" src="{{ site.baseurl }}/images/home03.png" alt="Stay Updated on Cyber Threats" />
             </div>
         </div>
     </section>
@@ -165,12 +49,12 @@
                 <p class="editable">Cyberbezpieczeństwo to nie tylko ochrona, ale inwestycja w przyszłość. Odkrywaj z nami, jak technologie i wiedza mogą zwiększyć Twoje bezpieczeństwo w sieci. Pozostań świadomy, bądź przygotowany.</p>
             </div>
             <div class="image">
-                <img class="editable" src="/images/home04.png" alt="Invest in Your Digital Future" />
+                <img class="editable" src="{{ site.baseurl }}/images/home04.png" alt="Invest in Your Digital Future" />
             </div>
         </div>
     </section>
 
-    <section class="hero" style="background-image: url('/images/home05.png'); background-size: cover;">
+    <section class="hero" style="background-image: url({% include relative-src.html src=page.image2 %})">
         <div class="inner-hero text-container">
             <div class="hero-text-container">
                 <h2 class="editable">Dołącz do społeczności</h2>
@@ -180,6 +64,3 @@
         </div>
     </section>
 </div>
-
-</body>
-</html>
